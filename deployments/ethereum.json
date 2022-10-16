@@ -1,0 +1,37 @@
+{
+  "ARTH": {
+    "abi": "IERC20",
+    "address": "0x8cc0f052fff7ead7f2edcccac895502e884a8a71"
+  },
+  "USDC": {
+    "abi": "IERC20",
+    "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+  },
+  "SCLP": {
+    "abi": "IERC20",
+    "address": "0x3f6d1649a1366b0e82173d33e365953f9f1cc84c"
+  },
+  "MAHA": {
+    "abi": "IERC20",
+    "address": "0xb4d930279552397bba2ee473229f89ec245bc365"
+  },
+  "WETH": {
+    "abi": "IWETH",
+    "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+  },
+  "MAHAFeeDistributor": {
+    "abi": "IFeeDistributor",
+    "verified": true,
+    "address": "0x00b1d6c3838aEe6bDf508B2d23178Abdb23863d3"
+  },
+  "SCLPFeeDistributor": {
+    "abi": "IFeeDistributor",
+    "verified": true,
+    "address": "0xf58ab48D0B8b92376e0FF7C40edeAf965bC2f1D6"
+  },
+  "StakingRewardsKeeper": {
+    "abi": "StakingRewardsKeeper",
+    "verified": true,
+    "address": "0x469122E0aB2D8a6FE9f28AeCad9C4f1a6821C5E0"
+  }
+}
