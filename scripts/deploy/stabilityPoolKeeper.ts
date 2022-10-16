@@ -20,8 +20,8 @@ async function main() {
   );
   const rate = e18.mul(1000);
 
-  const startTime = 1664665200;
-  const startEpoch = 0;
+  const startTime = 1662073200;
+  const startEpoch = 1;
 
   const keeper = await deployOrLoadAndVerify(
     "StabilityPoolKeeper",
