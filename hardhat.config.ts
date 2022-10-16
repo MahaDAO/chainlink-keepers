@@ -74,6 +74,11 @@ const config: HardhatUserConfig & any = {
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
+    bsc: {
+      url: `https://bsc-dataseed.binance.org/`,
+      accounts:
+        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+    },
     ethereum: {
       url: `https://mainnet.infura.io/v3/${process.env.INFURA_PROJECT_ID}`,
       accounts:
@@ -115,6 +120,7 @@ const config: HardhatUserConfig & any = {
   etherscan: {
     apiKey: {
       mainnet: process.env.ETHERSCAN_API_KEY,
+      bsc: process.env.BSCSCAN_API_KEY,
       polygon: process.env.POLYGONSCAN_API_KEY,
     },
   },

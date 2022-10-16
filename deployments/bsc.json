@@ -1,0 +1,19 @@
+{
+  "MAHA": {
+    "abi": "IERC20",
+    "address": "0xce86f7fcd3b40791f63b86c3ea3b8b355ce2685b"
+  },
+  "EPXLpToken": {
+    "abi": "IERC20",
+    "address": "0x4fc50CfA410F9d93739C65B0e0CF37E55283Eea9"
+  },
+  "DotDotIncentiveDistributor": {
+    "abi": "IDddIncentiveDistributor",
+    "address": "0x4625928fCb2Ece1Aca3dd2B992f7e2e4d9596446"
+  },
+  "DotDotFinanceBribeKeeper": {
+    "abi": "DotDotFinanceBribeKeeper",
+    "verified": true,
+    "address": "0x61f22e30f0ECBaE7f5881591fA16170D19700ec1"
+  }
+}
