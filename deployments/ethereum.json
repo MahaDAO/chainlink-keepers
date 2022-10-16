@@ -29,9 +29,19 @@
     "verified": true,
     "address": "0xf58ab48D0B8b92376e0FF7C40edeAf965bC2f1D6"
   },
+  "ETHCommunityIssuance": {
+    "abi": "ICommunityIssuance",
+    "address": "0xdac4961f0Ab8f7326D2d8ff75cFA1DBe29d558EC",
+    "verified": true
+  },
   "StakingRewardsKeeper": {
     "abi": "StakingRewardsKeeper",
     "verified": true,
     "address": "0x469122E0aB2D8a6FE9f28AeCad9C4f1a6821C5E0"
+  },
+  "StabilityPoolKeeper": {
+    "abi": "StabilityPoolKeeper",
+    "verified": true,
+    "address": "0x23c9ba9A19a4F3Fcc7Fdd3899c79Ea5a1b42dCCE"
   }
 }

@@ -9,22 +9,34 @@ async function main() {
   const [deployer] = await ethers.getSigners();
   console.log(`Deployer address is ${deployer.address}.`);
 
-  const maha = await getOutputAddress("MAHA");
+  const arthCommunityIssuance = await ethers.getContractAt(
+    "ICommunityIssuance",
+    await getOutputAddress("ETHCommunityIssuance", "ethereum")
+  );
+
+  const maha = await ethers.getContractAt(
+    "IERC20",
+    await getOutputAddress("MAHA", "ethereum")
+  );
   const rate = e18.mul(1000);
 
   const startTime = 1664665200;
-  const startEpoch = 1;
+  const startEpoch = 0;
 
-  await deployOrLoadAndVerify(
+  const keeper = await deployOrLoadAndVerify(
     "StabilityPoolKeeper",
-    "KeeperCompatibleInterface",
+    "StabilityPoolKeeper",
     [
+      arthCommunityIssuance.address, // ICommunityIssuance _arthCommunityIssuance,
       rate, // uint256 _mahaRate,
-      maha, // IERC20 _maha,
+      maha.address, // IERC20 _maha,
       startTime, // uint256 _startTime,
       startEpoch, // uint256 _startEpoch
     ]
   );
+
+  // await arthCommunityIssuance.transferOwnership(keeper.address);
+  console.log(new Date((await keeper.nextEpochPoint()) * 1000));
 }
 
 main().catch((error) => {

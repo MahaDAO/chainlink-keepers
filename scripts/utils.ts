@@ -50,7 +50,8 @@ export const saveABI = (
 };
 
 export const getOutput = (_network?: string) => {
-  const filename = `./deployments/${_network || network.name}.json`;
+  const __network = _network || network.name;
+  const filename = `./deployments/${__network}.json`;
 
   let outputFile: any = {};
   if (fs.existsSync(filename)) {
@@ -70,9 +71,10 @@ export const getOutputAddress = (key: string, _network?: string) => {
 export const deployOrLoad = async (
   key: string,
   contractName: string,
-  args: any[]
+  args: any[],
+  _network?: string
 ) => {
-  const addr = await getOutputAddress(key);
+  const addr = await getOutputAddress(key, _network);
   if (addr) {
     console.log(`using ${key} at ${addr}`);
     return await ethers.getContractAt(contractName, addr);
