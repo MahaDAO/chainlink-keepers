@@ -167,5 +167,10 @@
     "abi": "StakingRewardsKeeper",
     "verified": true,
     "address": "0xDd7010c8512394812117279d24BfFf89772C8cdD"
+  },
+  "StabilityPoolKeeper": {
+    "abi": "StabilityPoolKeeper",
+    "verified": true,
+    "address": "0x7860837c09A6C8b31f11D382FE0329cea12047b5"
   }
 }
