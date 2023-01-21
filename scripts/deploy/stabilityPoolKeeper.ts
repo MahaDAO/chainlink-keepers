@@ -11,18 +11,17 @@ async function main() {
 
   const rate = e18.mul(1000);
 
-  const startTime = 1662073200;
-  const startEpoch = 3;
+  const startTime = 1675189800;
 
   const keeper = await deployOrLoadAndVerify(
     "StabilityPoolKeeper",
     "StabilityPoolKeeper",
     [
-      "0xdac4961f0ab8f7326d2d8ff75cfa1dbe29d558ec", // ICommunityIssuance _arthCommunityIssuance,
+      "0x61274CD1f801B097BE7E5197b158999307893D2e", // ICommunityIssuance _arthCommunityIssuance,
       rate, // uint256 _mahaRate,
       await getOutputAddress("MAHA", "ethereum"), // IERC20 _maha,
       startTime, // uint256 _startTime,
-      startEpoch, // uint256 _startEpoch
+      await getOutputAddress("MAHATimelockController-14d", "ethereum"), // IERC20 _maha,
     ]
   );
 

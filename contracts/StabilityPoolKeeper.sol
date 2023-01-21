@@ -20,14 +20,16 @@ contract StabilityPoolKeeper is Epoch, KeeperCompatibleInterface {
     uint256 _mahaRate,
     IERC20 _maha,
     uint256 _startTime,
-    uint256 _startEpoch
-  ) Epoch(86400 * 30, _startTime, _startEpoch) {
+    address _owner
+  ) Epoch(86400 * 30, _startTime, 0) {
     arthCommunityIssuance = _arthCommunityIssuance;
     maha = _maha;
     mahaRate = _mahaRate;
 
-    uint256 maxInt = 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff;
+    uint256 maxInt = type(uint256).max;
     maha.approve(address(arthCommunityIssuance), maxInt);
+
+    _transferOwnership(_owner);
   }
 
   function updateMahaReward(uint256 reward) external onlyOwner {
@@ -43,7 +45,7 @@ contract StabilityPoolKeeper is Epoch, KeeperCompatibleInterface {
     return (_callable(), "");
   }
 
-  function performUpkeep(bytes calldata) external override checkEpoch {
+  function performUpkeep(bytes memory) external override checkEpoch {
     maha.transfer(address(arthCommunityIssuance), mahaRate);
     arthCommunityIssuance.notifyRewardAmount(mahaRate);
   }
