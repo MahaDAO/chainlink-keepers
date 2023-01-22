@@ -102,5 +102,10 @@
     "abi": "StabilityPoolKeeper",
     "verified": true,
     "address": "0x5e98d3f8B5074b6389477fD88856f5209748CaA7"
+  },
+  "EmissionControllerKeeper": {
+    "abi": "EmissionControllerKeeper",
+    "verified": true,
+    "address": "0x6818F17E4894CB1dAE9fD115f6da280291193C7b"
   }
 }
