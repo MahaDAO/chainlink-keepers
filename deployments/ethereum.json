@@ -107,5 +107,10 @@
     "abi": "EmissionControllerKeeper",
     "verified": true,
     "address": "0x6818F17E4894CB1dAE9fD115f6da280291193C7b"
+  },
+  "ARTHPriceKeeper": {
+    "abi": "ARTHPriceKeeper",
+    "verified": false,
+    "address": "0x53C6ADe8ae2eC803bfB1C494C7A1600C615Fe8FC"
   }
 }
