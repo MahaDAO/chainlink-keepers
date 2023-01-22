@@ -110,7 +110,7 @@
   },
   "ARTHPriceKeeper": {
     "abi": "ARTHPriceKeeper",
-    "verified": false,
+    "verified": true,
     "address": "0x53C6ADe8ae2eC803bfB1C494C7A1600C615Fe8FC"
   }
 }
