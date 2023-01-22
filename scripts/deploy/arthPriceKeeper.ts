@@ -23,7 +23,7 @@ async function main() {
   );
 
   // await arthCommunityIssuance.transferOwnership(keeper.address);
-  console.log(new Date((await keeper.nextEpochPoint()) * 1000));
+  console.log(new Date((await keeper.nextUpkeepTime()) * 1000));
 }
 
 main().catch((error) => {

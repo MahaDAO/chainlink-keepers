@@ -45,9 +45,15 @@ contract StabilityPoolKeeper is Epoch, KeeperCompatibleInterface {
     return (_callable(), "");
   }
 
-  function performUpkeep(bytes memory) external override checkEpoch {
+  function performUpkeep(bytes memory performData)
+    external
+    override
+    checkEpoch
+  {
     maha.transfer(address(arthCommunityIssuance), mahaRate);
     arthCommunityIssuance.notifyRewardAmount(mahaRate);
+
+    emit PerformUpkeep(msg.sender, performData);
   }
 
   function refund(IERC20 token) external onlyOwner {

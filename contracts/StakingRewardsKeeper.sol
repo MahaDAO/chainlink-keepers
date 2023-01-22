@@ -56,7 +56,7 @@ contract StakingRewardsKeeper is Pausable, Epoch, KeeperCompatibleInterface {
     tokenRates[_tokenIndex] = _tokenRate;
   }
 
-  function checkUpkeep(bytes calldata _checkData)
+  function checkUpkeep(bytes calldata)
     external
     view
     override
@@ -86,6 +86,8 @@ contract StakingRewardsKeeper is Pausable, Epoch, KeeperCompatibleInterface {
       );
       maha.transfer(msg.sender, mahaRewardPerEpoch);
     }
+
+    emit PerformUpkeep(msg.sender, performData);
   }
 
   function refund(IERC20 token) external onlyOwner {

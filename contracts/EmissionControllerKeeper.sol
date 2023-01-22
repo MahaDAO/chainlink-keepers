@@ -59,5 +59,7 @@ contract EmissionControllerKeeper is Ownable, KeeperCompatibleInterface {
         IERC20(registry.maha()).transfer(msg.sender, mahaRewardPerEpoch);
       }
     }
+
+    emit PerformUpkeep(msg.sender, performData);
   }
 }
