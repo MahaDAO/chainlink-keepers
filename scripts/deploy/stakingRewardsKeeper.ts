@@ -24,6 +24,7 @@ async function main() {
       [e18.mul(1000), e18.mul(9615)], // uint256[] memory _tokenRates,
       maha, // IERC20 _maha,
       e18.mul(10), // uint256 _mahaRewardPerEpoch
+      "0x6357EDbfE5aDA570005ceB8FAd3139eF5A8863CC", // _owner
     ]
   );
 

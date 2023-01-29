@@ -26,13 +26,16 @@ contract StakingRewardsKeeper is Pausable, Epoch, KeeperCompatibleInterface {
     IERC20[] memory _tokens,
     uint256[] memory _tokenRates,
     IERC20 _maha,
-    uint256 _mahaRewardPerEpoch
+    uint256 _mahaRewardPerEpoch,
+    address _owner
   ) Epoch(86400 * 7, block.timestamp, 0) {
     distributors = _distributors;
     tokens = _tokens;
     maha = _maha;
     mahaRewardPerEpoch = _mahaRewardPerEpoch;
     tokenRates = _tokenRates;
+
+    _transferOwnership(_owner);
   }
 
   function updateMahaReward(uint256 reward) external onlyOwner {

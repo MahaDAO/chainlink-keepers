@@ -43,35 +43,20 @@
     "abi": "IUniswapNFTManager",
     "address": "0xC36442b4a4522E871399CD717aBDD847Ab11FE88"
   },
-  "StakingRewardsKeeper": {
-    "abi": "StakingRewardsKeeper",
-    "verified": true,
-    "address": "0x469122E0aB2D8a6FE9f28AeCad9C4f1a6821C5E0"
-  },
-  "SCLPPendingFeeDistributor": {
-    "abi": "PendingFeeDistributor",
-    "verified": true,
-    "address": "0xc06CE49b9Ccf6c5917c63279E0C82499E4501f73"
-  },
   "SCLPFeeDistributor": {
-    "abi": "FeeDistributor",
+    "abi": "TransparentUpgradeableProxy",
     "verified": true,
-    "address": "0xCF61094829e68C4539E0378D31197204dA53b5E0"
+    "address": "0xBcc8b09D85fabd90BDA773cA762C341cfaBc3e2B"
+  },
+  "MAHAFeeDistributor": {
+    "abi": "TransparentUpgradeableProxy",
+    "verified": false,
+    "address": "0x5094B4C40E8d7c9a7522349AFCE1032237e35f20"
   },
   "MultiFeeDistributor": {
     "abi": "MultiFeeDistributor",
     "verified": true,
     "address": "0x88860D30716202c9257720BD0c65563657c9Bb79"
-  },
-  "MAHAPendingFeeDistributor": {
-    "abi": "PendingFeeDistributor",
-    "verified": true,
-    "address": "0x33d9f817AF2C507E20c8039a6786d1a1E5524fCF"
-  },
-  "MAHAFeeDistributor": {
-    "abi": "FeeDistributor",
-    "verified": true,
-    "address": "0x587717B60bA3F383C097089D9414576a5a63D7e0"
   },
   "MAHAReferralV1": {
     "abi": "MAHAReferralV1",
@@ -112,5 +97,10 @@
     "abi": "ARTHPriceKeeper",
     "verified": true,
     "address": "0x53C6ADe8ae2eC803bfB1C494C7A1600C615Fe8FC"
+  },
+  "StakingRewardsKeeper": {
+    "abi": "StakingRewardsKeeper",
+    "verified": true,
+    "address": "0x2E8978Ae41ec867a0eB5dAf38a4E8b62858DbFCb"
   }
 }
