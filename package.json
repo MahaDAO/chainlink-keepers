@@ -45,5 +45,6 @@
     "@nomicfoundation/hardhat-network-helpers": "^1.0.6",
     "@nomiclabs/hardhat-web3": "^2.0.0",
     "@openzeppelin/contracts": "^4.7.3"
-  }
+  },
+  "version": "0.1.0"
 }
